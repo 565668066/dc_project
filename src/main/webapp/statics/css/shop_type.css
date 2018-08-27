@@ -1,0 +1,67 @@
+body {
+    position: relative;
+}
+.row1 .card{
+    width: 50%;
+    border: 0px;
+    text-align: center;
+}
+.card-header{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.ftbox{
+    border: 1px solid rgba(0,0,0,.125);
+    /* border-radius: .25rem; */
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+.alert{
+    margin-top:10px;
+}
+.card-body{
+    text-align: center;
+}
+.card-body .card-title{
+    /* max-width: 115.5px; */
+    max-height: 25px;
+    overflow: hidden;
+}
+.card-body .badge{
+    min-width: 55px;
+    width: 25%;
+}
+#fixedbar{
+    position: fixed;
+    float:left;
+    /* width: 20%; */
+    /* min-width: ; */
+    top: 20%;
+    width: 12%;
+    /* right: 0px; */
+    /* left: 2%; */
+    z-index: 1000;
+    /* z-index: $zindex-fixed; */
+}
+#demo {
+    margin-top: 80px;
+}
+
+.card a:link {
+    color: black;
+}
+.card a:hover {
+    color: black;
+    text-decoration: none;
+}
+.card a:active {
+    color: black;
+}
+.card a:visited {
+    color: black;
+}
+ul{
+    text-decoration: none;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dc_project.dao.ShopGoodsDao">
+    <insert id="addShopGoods" parameterType="com.dc_project.entity.ShopGoods">
+        insert into shopGoods(category, classes, goods, picture, price, brand, place, evaluation,
+                     remark, goodsId, origin, specification, color, material, pdctDate, shelfLife)
+                     VALUE(#{category},#{classes},#{goods},#{picture},#{price},#{brand},#{evaluation},
+                     #{remark},#{goodsId},#{origin},#{specification},#{color},#{material},#{pdctDate},#{shelfLife});
+    </insert>
+    <delete id="deleteShopGoods" parameterType="java.lang.String">
+        delete from shopGoods where goodsId = #{goodsId};
+    </delete>
+    <select id="selectAllShopGoods" resultType="com.dc_project.entity.ShopGoods">
+        select category, classes, goods, picture, price, brand, place, evaluation, remark,
+        goodsId, origin, specification, color, material, pdctDate, shelfLife from shopGoods;
+    </select>
+    <select id="selectByGoodsId" parameterType="java.lang.String" resultType="com.dc_project.entity.ShopGoods">
+        select category, classes, goods, picture, price, brand, place, evaluation, remark,
+        goodsId, origin, specification, color, material, pdctDate, shelfLife from shopGoods where goodsId like #{_parameter};
+    </select>
+    <select id="selectByGoods" parameterType="java.lang.String" resultType="com.dc_project.entity.ShopGoods">
+        select category, classes, goods, picture, price, brand, place, evaluation, remark,
+        goodsId, origin, specification, color, material, pdctDate, shelfLife from shopGoods where goods like #{_parameter};
+    </select>
+    <select id="selectByCategory" parameterType="java.lang.String" resultType="com.dc_project.entity.ShopGoods">
+        select category, classes, goods, picture, price, brand, place, evaluation, remark,
+        goodsId, origin, specification, color, material, pdctDate, shelfLife from shopGoods where category like #{_parameter};
+    </select>
+    <select id="selectByClasses" parameterType="java.lang.String" resultType="com.dc_project.entity.ShopGoods">
+        select category, classes, goods, picture, price, brand, place, evaluation, remark,
+        goodsId, origin, specification, color, material, pdctDate, shelfLife from shopGoods where classes like #{_parameter};
+    </select>
+    <select id="selectShopGoods" parameterType="java.lang.String" resultType="com.dc_project.entity.ShopGoods">
+        select category, classes, goods, picture, price, brand, place, evaluation, remark,
+        goodsId, origin, specification, color, material, pdctDate, shelfLife from shopGoods where goodsId = #{goodsId};
+    </select>
+    <update id="reviseShopGoods" parameterType="com.dc_project.entity.ShopGoods">
+        UPDATE ShopGoods SET category=#{category},classes=#{classes},goods=#{goods},picture=#{picture},
+        price=#{price},brand=#{brand},evaluation=#{evaluation},remark=#{remark},origin=#{origin},
+        specification=#{specification},color=#{color},material=#{material},pdctDate=#{pdctDate},
+        shelfLife=#{shelfLife} WHERE goodsId=#{goodsId};
+    </update>
+</mapper>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dc_project.dao.UserDao">
+
+    <select id="checkUser"  resultType="int" parameterType="com.dc_project.entity.User">
+        select count(*) from users where username=#{username} and password=#{password};
+    </select>
+
+    <select id="checkUsername" resultType="int" parameterType="java.lang.String">
+        select count(*) from users where username=#{_parameter};
+    </select>
+
+    <select id="checkId"  resultType="int" parameterType="java.lang.String">
+        select count(*) from users where id=#{_parameter};
+    </select>
+
+    <select id="checkPassword"  resultType="int" parameterType="java.lang.String">
+        select count(*) from users where password=#{_parameter};
+    </select>
+
+    <select id="selectAllUser" resultType="com.dc_project.entity.User" >
+        select realName,id,college,username,password,email from users;
+    </select>
+
+    <select id="selectUser" parameterType="java.lang.String" resultType="com.dc_project.entity.User">
+        SELECT realName,id,college,username,password,email from users where id=#{_parameter};
+    </select>
+
+    <select id="selectByUsername" parameterType="java.lang.String" resultType="com.dc_project.entity.User">
+        select realName,id,college,username,password,email from users where username like #{_parameter};
+    </select>
+
+    <select id="selectById" resultType="com.dc_project.entity.User" parameterType="java.lang.String">
+        SELECT realName,id,college,username,password,email from users where id like #{_parameter};
+    </select>
+
+    <select id="selectByRealName" resultType="com.dc_project.entity.User" parameterType="java.lang.String">
+        SELECT realName,id,college,username,password,email from users where realName like #{_parameter};
+    </select>
+
+    <select id="selectByCollege" resultType="com.dc_project.entity.User" parameterType="java.lang.String">
+        SELECT realName,id,college,username,password,email from users where college like #{_parameter};
+    </select>
+
+    <insert id="addUser" parameterType="com.dc_project.entity.User">
+        insert into users(realName,id,college,username,password,email) VALUE(#{realName},#{id},#{college},#{username},#{password},#{email});
+    </insert>
+
+    <delete id="deleteUser" parameterType="java.lang.String">
+        delete from users where id=#{_parameter};
+    </delete>
+
+    <update id="reviseUser" parameterType="com.dc_project.entity.User">
+        UPDATE users SET college=#{college}, username=#{username}, password=#{password}, email=#{email} WHERE id=#{id};
+    </update>
+
+</mapper>

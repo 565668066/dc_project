@@ -1,0 +1,39 @@
+.vary table{
+	margin: 0 auto;
+	text-align: center;
+	border-collapse: separate;
+	border-spacing: 10px 50px;
+	width: 100%;
+}
+.pic{
+	vertical-align: middle;
+	margin: 0 auto;
+}
+table th{
+	text-align: center;
+}
+.vary th{
+	padding-bottom: 30px;
+}
+.vary th:hover{
+	box-shadow: 0 0 0.3em rgba(0,0,0,0.3);
+} 
+.manu{
+	margin-top: 20px;
+	text-align: center;
+}
+.manu ul{
+	display: inline-block;
+}
+.manu ul li{
+	font-size: 1.5em;
+  text-decoration: none;
+  text-align: center;
+  list-style: none;
+  float: left;
+	width: 10em;
+	display: block;
+}
+#clear{
+	clear: both;
+}

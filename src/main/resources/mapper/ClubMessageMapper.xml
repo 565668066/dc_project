@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dc_project.dao.ClubMessageDao">
+    <insert id="addClubMessage" parameterType="com.dc_project.entity.ClubMessage">
+        insert into clubMessage(clubName,content,newsTime,manager,contact,title) VALUE(#{clubName},#{content},#{newsTime},#{manager},#{contact},#{title});
+    </insert>
+    <delete id="deleteClubMessage" parameterType="int">
+        delete from clubMessage where id = #{id};
+    </delete>
+    <select id="selectAllClubMessage" resultType="com.dc_project.entity.ClubMessage">
+        select clubName,content,newsTime,manager,contact,id,title from clubMessage;
+    </select>
+    <select id="selectByClubName" parameterType="java.lang.String" resultType="com.dc_project.entity.ClubMessage">
+        select clubName,content,newsTime,manager,contact,id,title from clubMessage where clubName like #{_parameter};
+    </select>
+    <select id="selectByNewsTime" parameterType="java.lang.String" resultType="com.dc_project.entity.ClubMessage">
+        select clubName,content,newsTime,manager,contact,id,title from clubMessage where newsTime like #{_parameter};
+    </select>
+    <select id="selectByTitle" parameterType="java.lang.String" resultType="com.dc_project.entity.ClubMessage">
+        select clubName,content,newsTime,manager,contact,id,title from clubMessage where title like #{_parameter};
+    </select>
+    <select id="selectById" parameterType="int" resultType="com.dc_project.entity.ClubMessage">
+        select clubName,content,newsTime,manager,contact,id,title from clubMessage where id = #{id};
+    </select>
+    <select id="selectClubMessage" parameterType="java.lang.String" resultType="com.dc_project.entity.ClubMessage">
+        select clubName,content,newsTime,manager,contact,id,title from clubMessage where title = #{title};
+    </select>
+    <update id="reviseClubMessage" parameterType="com.dc_project.entity.ClubMessage">
+        UPDATE clubMessage SET clubName=#{clubName},content=#{content},newsTime=#{newsTime},manager=#{manager},contact=#{contact},title=#{title} WHERE id=#{id};
+    </update>
+</mapper>

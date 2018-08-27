@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 实例</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#collapse1">
+                    食品类
+                </a>
+            </div>
+            <ul id="collapse1"class="list-group collapse show"  data-parent="#accordion">
+                <li class="list-group-item">方便食品</li>
+                <li class="list-group-item">休闲食品</li>
+                <li class="list-group-item">其他</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapse2">
+                    日用品类
+                </a>
+            </div>
+            <ul id="collapse2" class="list-group collapse" data-parent="#accordion">
+                <li class="list-group-item">洗化用品</li>
+                <li class="list-group-item">宿舍用品</li>
+                <li class="list-group-item">卫生用品</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapse3">
+                    百货类
+                </a>
+            </div>
+            <ul id="collapse3" class="list-group collapse" data-parent="#accordion">
+                <li class="list-group-item">针织品</li>
+                <li class="list-group-item">体育用品</li>
+                <li class="list-group-item">鞋帽类</li>
+                <li class="list-group-item">数码产品</li>
+                <li class="list-group-item">文具类</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

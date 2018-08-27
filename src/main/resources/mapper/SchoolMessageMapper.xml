@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dc_project.dao.SchoolMessageDao">
+    <insert id="addSchoolMessage" parameterType="com.dc_project.entity.SchoolMessage">
+        insert into schoolMessage(department,content,newsTime,manager,contact,title) VALUE(#{department},#{content},#{newsTime},#{manager},#{contact},#{title});
+    </insert>
+    <delete id="deleteSchoolMessage" parameterType="int">
+        delete from schoolMessage where id= #{id};
+    </delete>
+    <select id="selectAllSchoolMessage" resultType="com.dc_project.entity.SchoolMessage">
+        select department,content,newsTime,manager,contact,id,title from schoolMessage;
+    </select>
+    <select id="selectByDepartment" parameterType="java.lang.String" resultType="com.dc_project.entity.SchoolMessage">
+        select department,content,newsTime,manager,contact,id,title from schoolMessage where department like #{_parameter};
+    </select>
+    <select id="selectByNewsTime" parameterType="java.lang.String" resultType="com.dc_project.entity.SchoolMessage">
+        select department,content,newsTime,manager,contact,id,title from schoolMessage where newsTime like #{_parameter};
+    </select>
+    <select id="selectByTitle" parameterType="java.lang.String" resultType="com.dc_project.entity.SchoolMessage">
+        select department,content,newsTime,manager,contact,id,title from schoolMessage where title like #{_parameter};
+    </select>
+    <select id="selectById" parameterType="int" resultType="com.dc_project.entity.SchoolMessage">
+        select department,content,newsTime,manager,contact,id,title from schoolMessage where id = #{id};
+    </select>
+    <select id="selectSchoolMessage" parameterType="java.lang.String" resultType="com.dc_project.entity.SchoolMessage">
+        select department,content,newsTime,manager,contact,id,title from schoolMessage where title = #{title};
+    </select>
+    <update id="reviseSchoolMessage" parameterType="com.dc_project.entity.SchoolMessage">
+        UPDATE schoolMessage SET department=#{department},content=#{content},newsTime=#{newsTime},manager=#{manager},contact=#{contact},title=#{title} WHERE id=#{id};
+    </update>
+</mapper>

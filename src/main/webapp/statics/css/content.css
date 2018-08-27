@@ -1,0 +1,60 @@
+.specify{
+	text-align: center;
+}
+.left{
+	float: left;
+	width: 25em;
+	height: 25em;
+	text-align: center;
+	border: solid 1px #f2eff2;
+}
+.left img{
+	padding-top: 3em;
+	width: 20em;
+	margin:  auto;
+}
+.right{
+	width: 50em;
+	padding-top: 3em;
+	float: right;
+}
+.title{
+	font-size: 2em;
+	font-weight: bold;
+	text-align: left;
+}
+.price table{
+	width: 100%;
+	border-collapse: separate;
+	border-spacing:  0px 5px;
+}
+.price th{
+	text-align: left;
+	font-weight: normal;
+}
+.price{
+	background-color: #f2eff2;
+	padding: 2em;
+}
+b{
+	color: #ff2212;
+	font-size: 2em;
+}
+.buy table{
+	border-collapse: separate;
+	border-spacing: 50px 10px;
+}
+.buy input{
+	width: 15em;
+	height: 3em;
+	background-color: #f58f98;
+	border: 0;
+}
+.middle{
+	padding-top: 5em;
+	width: 90%;
+	margin: 10px auto;
+}
+.middle img{
+	margin: auto;
+}

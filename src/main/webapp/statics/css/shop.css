@@ -1,0 +1,79 @@
+.body{
+}
+.contanier{
+  width: 75%;
+  margin: auto;
+}
+.search table{
+  margin: auto;
+  width: 80%;
+}
+.search th{
+  width: 100%;
+}
+.blank{
+  width: 100%; 
+  height: 3em;
+  padding: 10px;
+}
+.butt{
+  width: 10em;
+  height: 3em;
+  background-color: #d5c59f;
+  border: 0;
+}
+.card table{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 50px 0;
+}
+.single-member{
+  font-family: sans-sarif; 
+  margin-top: 20px;
+  background-color: #fff; 
+  text-align: center; 
+}
+.member-image img{
+  max-width: 300px;
+}
+p {
+  font-size: 2em; 
+  font-weight: normal; 
+  margin: 10px 0 0; 
+  text-transform: uppercase;
+}        
+.effect{
+  max-height: 302px; 
+  overflow: hidden;
+}
+.effect .member-image{
+  transition: 0.4s; 
+  width: 100%; 
+  display: inline-block; 
+  float: none; 
+  vertical-align: middle;
+}
+.effect .member-info{
+  transition: 0.4s;
+}
+.effect .member-image img{
+  width: 100%; 
+  vertical-align: bottom;
+}
+.effect:hover .member-image{
+  border-bottom: 0; 
+  border-radius: 0 0 50px 50px; 
+  height: 81px; 
+  display: inline-block; 
+  overflow: hidden; 
+  transition: 0.4s;
+}         
+a{
+  text-decoration: none;
+  color: #000;
+}     
+a:hover{
+  text-decoration: none;
+}   
