@@ -179,7 +179,7 @@
                 <div class="carousel-caption">
                     <h1>食品类</h1>
                     <p>各类食物，应有尽有</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">了解详情</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="/shop_foods" role="button">了解详情</a></p>
                 </div>
             </div>
         </div>
@@ -189,7 +189,7 @@
                 <div class="carousel-caption"><!--text-right-->
                     <h1>日用品类</h1>
                     <p>满足学生校内日常生活需求</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">了解详情</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="/shop_necessities" role="button">了解详情</a></p>
                 </div>
             </div>
         </div>
@@ -199,7 +199,7 @@
                 <div class="carousel-caption"><!--text-right-->
                     <h1>百货类</h1>
                     <p>只有想不到，没有买不到</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">了解详情</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="/shop_departments" role="button">了解详情</a></p>
                 </div>
             </div>
         </div>
@@ -226,7 +226,7 @@
                         <p class="card-text">食品类：各类食物，应有尽有</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="row col-md-12">
-                                <a href="shop_foods.html" class="offset-md-10"><button type="button" class="btn btn-sm btn-outline-secondary ">更多>></button></a>
+                                <a href="/shop_foods" class="offset-md-10"><button type="button" class="btn btn-sm btn-outline-secondary ">更多>></button></a>
                             </div>
                         </div>
                     </div>
@@ -239,7 +239,7 @@
                         <p class="card-text">日用品类：满足学生校内日常生活需求</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="row col-md-12">
-                                <a href="shop_necessities.html" class="offset-md-10"><button type="button" class="btn btn-sm btn-outline-secondary">更多>></button></a>
+                                <a href="/shop_necessities" class="offset-md-10"><button type="button" class="btn btn-sm btn-outline-secondary">更多>></button></a>
                             </div>
                         </div>
                     </div>
@@ -252,7 +252,7 @@
                         <p class="card-text">百货类：只有想不到，没有买不到</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="row col-md-12">
-                                <a href="shop_departments.html" class="offset-md-10"><button type="button" class="btn btn-sm btn-outline-secondary"
+                                <a href="/shop_departments" class="offset-md-10"><button type="button" class="btn btn-sm btn-outline-secondary"
                                 >更多>></button></a>
                             </div>
                         </div>
