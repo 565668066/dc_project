@@ -52,7 +52,7 @@ public interface ShopGoodsDao {
      * 通过goodsId选择指定商品
      * @param goodsId
      */
-    public ShopGoods selectShopGoods(String goodsId);
+    public ShopGoods selectGoods(String goodsId);
 
     /**
      * 修改商品
